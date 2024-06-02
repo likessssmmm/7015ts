@@ -1,0 +1,470 @@
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Time & Ink</title>
+<style type="text/css">
+.nav {	color: #FFF;
+	text-transform: none;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	background-color: #C60;
+	font-size: 24px;
+}
+body {
+	background-color: #000;
+}
+#apDiv1 {	position: absolute;
+	left: 307px;
+	top: 85px;
+	width: 151px;
+	height: 168px;
+	z-index: 1;
+	visibility: hidden;
+}
+	.imgIndex:hover img{
+		transform: scale(1.2);
+}
+.imgIndex{
+	overflow: hidden;
+
+}
+.imgIndex img{
+	transition: transform 0.3s ease-out;
+	
+}
+.ulBottom{
+	display: flex;
+	justify-content:space-around;
+	padding:90px 0px;
+	background: rgba(24,24,24,1.00);
+}
+.ulBottom li{
+	  display: inline-block;
+	
+}
+.ulBottom li img{
+	width: 220px;
+}
+.guideGrid{
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	justify-content:center;
+	
+}
+.guideGrid>div{
+	overflow:hidden;
+}
+.guideGrid>div:hover img{
+	transform: scale(1.2);
+}
+.guideGrid img{
+	width: 100%;
+    transition: transform 0.3s ease;
+}
+/*学术页面*/
+.ulTop{
+	list-style: none;
+	color: aliceblue;
+	margin-top: 60px;
+	text-align: center;
+}
+.ulTop li{
+	margin-left: 60px;
+	  display: inline-block;
+		
+}
+.ulTop li:hover a{
+	color: rgba(243,124,33,1.00)
+}
+/*文创页面*/
+.changeColor:hover a{
+	color: aliceblue;
+}
+.changeNum>div:hover a
+{
+	color: rgba(243,124,33,1.00);
+}
+ *{
+	padding: 0;
+	margin: 0;
+}	
+div {
+  line-height: 0;
+}
+img {
+  vertical-align: middle;
+}
+
+.menu{
+		line-height: 60px;
+		padding: 10px;
+		margin: auto;
+		background-color:rgba(0,0,0,1.00);
+		color: aliceblue;
+	}
+	.menu ul {
+   line-height: 40px;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+}
+
+	.menu li {
+  display: inline-block;
+  margin-right: 40px;
+  width: 100px;
+  height: 40px;
+  /* 其他样式属性 */
+  box-shadow: none; /* 首先将 li 标签原有的边框样式清除 */
+}
+	.menu li a {
+  		color: aliceblue;
+		text-decoration: none;
+}
+	.menu li:hover {
+ 
+  box-shadow: inset 0 0 0 1px #ffffff, /* 内层白色虚线边框 */
+              inset 0 0 0 1px #000000; /* 外层黑色实线边框 */
+}
+	.menu li:visited {
+ 
+  box-shadow: inset 0 0 0 1px #ffffff, /* 内层白色虚线边框 */
+              inset 0 0 0 3px yellow; /* 外层黑色实线边框 */
+}
+  .menu li:active {
+ 
+  box-shadow: inset 0 0 0 1px #ffffff, /* 内层白色虚线边框 */
+              inset 0 0 0 3px red; /* 外层黑色实线边框 */
+}
+	.no-boxshadow:hover{
+	box-shadow:0 0 0 transparent!important;
+} 
+
+/* 搜索框基础样式 */
+.search-box {
+  position: relative;
+  display: inline-block;
+}
+
+.search-box input[type="text"] {
+  padding: 8px 30px 8px 10px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-box button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-box button i {
+  font-size: 20px;
+  color: #888;
+}
+
+/* 鼠标悬停样式 */
+.search-box:hover input[type="text"] {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.search-box:hover button i {
+  color: #333;
+}
+/*下拉菜单*/
+.droplist{
+            display:none;
+            overflow:hidden;
+			z-index:3;
+			position:fixed;
+			width:100px;
+	      
+        }
+.menu li:hover .droplist{
+            display: block;  
+        }
+
+/*grid布局*/
+.gridBottom{
+	display: grid;
+	grid-template-columns:repeat(5,15%);
+	grid-template-rows: 150px 150px;
+	grid-gap: 60px;
+	justify-content: center;
+	
+	padding: 60px 0px;
+	color:rgba(255,178,1,1.00);
+	font-weight: 600;
+	background: rgba(100,100,100,1.00);
+}
+.gridBottom>div{
+	position: relative;
+}
+.gridBottom>div>div {
+	overflow: hidden;
+}
+.gridBottom>div:hover img{
+	transform: scale(1.2);
+}
+.gridBottom>div img{
+	width: 100%;
+	height: 100%;
+	 transition: transform 0.3s ease-out;
+}
+/*轮播图*/
+.slider {
+  width: 100%;
+height: 360px;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  
+  opacity: 0;
+  position: absolute;
+  animation: slide 6s infinite;
+ object-fit: cover;
+}
+
+.slider img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slider img:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.slider img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  43.33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+ #apDiv4 {
+	position: absolute;
+	left: 548px;
+	top: 86px;
+	width: 167px;
+	height: 149px;
+	z-index: 2;
+	visibility: hidden;
+}
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient(
+                45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000
+              );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+            }
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+</style>
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d){ //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script>
+    function changeimg1(){
+        document.getElementById("image1").src="../images/AOW/HY.png";
+    }
+    function changeimg2(){
+        document.getElementById("image1").src="../images/AOW/LZY.png";
+    }
+    function changeimg3(){
+        document.getElementById("image1").src="../images/AOW/OYX.png";
+    }
+    function changeimg4(){
+        document.getElementById("image1").src="../images/AOW/SX.png";
+    }
+    function changeimg5(){
+        document.getElementById("image1").src="../images/AOW/SS.png";
+    }
+    function changeimg6(){
+        document.getElementById("image1").src="../images/AOW/SZ.png";
+    }
+    function changeimg7(){
+        document.getElementById("image1").src="../images/AOW/WAS.png";
+    }
+    function changeimg8(){
+        document.getElementById("image1").src="../images/AOW/ZG.png";
+    }
+</script>
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+</head>
+
+<body onload="MM_preloadImages('../images/导览/l1.png')">
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td width="18%" align="center" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><img src="../images/index/02.jpg" width="300" height="74" /></td>
+    <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><a href="index.html" class="nav">Home page</a></td>
+ <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv4','','hide','apDiv1','','show')" onmouseout="MM_showHideLayers('apDiv1','','show')">
+     <a href="CI.html" class="nav" onmouseover="MM_showHideLayers('apDiv4','','hide','apDiv1','','show')" onmouseout="MM_showHideLayers('apDiv1','','hide')">Character introduction</a></td>
+<td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','show')"
+    onmouseout="MM_showHideLayers('apDiv4','','hide','apDiv4','','show')"><a href="CT.html" class="nav">Character trajectory</a></td>
+    <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><a href="AOW.html" class="nav">Appreciation of works</a></td>
+    <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><a href="CU.html" class="nav">Contact us</a></td>
+ </tr>
+  <tr>
+    <td height="24" colspan="8">&nbsp;</td>
+  </tr>
+</table>
+<table  border="7" width="100%" border="0" align="center" cellspacing="0">
+    <tr>
+        <td width="25%" align="center"><button class="button-85" onclick="changeimg1()">Hanyu</button></td>
+        <td rowspan="8" width="75%" align="center"><img id='image1' src='../images/AOW/HY.png' height="740" width="650"></td>
+    </tr>
+    <tr>
+        <td width="25%" align="center"><button class="button-85" onclick="changeimg2()">LiuZongyuan</button></td>
+    </tr>
+    <tr>
+        <td width="25%" align="center"><button class="button-85" onclick="changeimg3()">OuYangxiu</button></td>
+    </tr>
+    <tr>
+        <td width="25%" align="center"><button class="button-85" onclick="changeimg4()">Suxun</button></td>
+    </tr>
+    <tr>
+        <td width="25%" align="center"><button class="button-85" onclick="changeimg5()">Sushi</button></td>
+    </tr>
+    <tr>
+        <td width="25%" align="center"><button class="button-85" onclick="changeimg6()">Suzhe</button></td>
+    </tr>
+    <tr>
+        <td width="25%" align="center"><button class="button-85" onclick="changeimg7()">WangAnshi</button></td>
+    </tr>
+    <tr>
+        <td width="25%" align="center"><button class="button-85" onclick="changeimg8()">Zenggong</button></td>
+    </tr>
+</table>
+<table width="100%" align="center" border="5%" cellspacing="0">
+    <tr>
+        <td width="40%" align="center"><div class="flourish-embed flourish-hierarchy" data-src="visualisation/18086784"></div></td>
+        <td rowspan="3" width="4%"> </td>
+    <td rowspan="3" width="40%" align="center"><div class="flourish-embed flourish-radar" data-src="visualisation/18086547"><</div></td>
+</tr>
+    <tr>
+         <td width="40%" align="center"><div class="flourish-embed flourish-chart" data-src="visualisation/18123209"></div></td>
+    </tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td align="center">&nbsp;</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td align="center"><img src="../images/index/06.jpg" alt="" width="1431" height="220" /></td>
+  </tr>X
+</table>
+</body>
+</html>

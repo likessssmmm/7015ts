@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Time & Ink</title>
+<style type="text/css">
+.nav {color: #FFF;
+	text-transform: none;
+	text-decoration: none;
+}
+#apDiv1 {position: absolute;
+	left: 307px;
+	top: 85px;
+	width: 151px;
+	height: 168px;
+	z-index: 1;
+	visibility: hidden;
+}
+body {
+	background-color: #000;
+}
+a:hover {
+	background-color: #F63;
+	font-size: 24px;
+}
+#apDiv4 {
+	position: absolute;
+	left: 620px;
+	top: 86px;
+	width: 167px;
+	height: 149px;
+	z-index: 2;
+	visibility: hidden;
+}
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient(
+                45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000
+              );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+            }
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+</style>
+
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3)
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script>
+    function changeimg1(){
+        document.getElementById("image1").src="../images/CU/l1.png";
+    }
+    function changeimg2(){
+        document.getElementById("image1").src="../images/CU/02.jpg";
+    }
+    function changeimg3(){
+        document.getElementById("image1").src="../images/CU/b1.jpg";
+    }
+</script>
+</head>
+
+<body onload="MM_preloadImages('../images/CI/l1.png')">
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td width="18%" align="center" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><img src="../images/index/02.jpg" width="300" height="74" /></td>
+    <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><a href="index.html" class="nav">Home page</a></td>
+ <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv4','','hide','apDiv1','','show')" onmouseout="MM_showHideLayers('apDiv1','','show')">
+     <a href="CI.html" class="nav" onmouseover="MM_showHideLayers('apDiv4','','hide','apDiv1','','show')" onmouseout="MM_showHideLayers('apDiv1','','hide')">Character introduction</a></td>
+<td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','show')"
+    onmouseout="MM_showHideLayers('apDiv4','','hide','apDiv4','','show')"><a href="CT.html" class="nav">Character trajectory</a></td>
+    <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><a href="AOW.html" class="nav">Appreciation of works</a></td>
+    <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><a href="CU.html" class="nav">Contact us</a></td>
+ </tr>
+  <tr>
+    <td height="24" colspan="8">&nbsp;</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td align="center">&nbsp;</td>
+  </tr>
+</table>
+<table  border="2" width="80%" border="0" align="center" cellspacing="0">
+    <tr>
+        <td width="25%" align="center"><button onclick="changeimg1()" class="button-85" >Humanities: 《清明上河图》</button></td>
+        <td rowspan="3" width="75%" align="center"><img id='image1' src='../images/CU/l1.png' height="400" width="800"></td>
+    </tr>
+    <tr>
+        <td width="25%" align="center"><button onclick="changeimg2()" class="button-85" >Landscape: 《溪山雪意图》</button></td>
+    </tr>
+    <tr>
+        <td width="25%" align="center"><button class="button-85" onclick="changeimg3()" >Inside the court: 《步辇图》</button></td>
+    </tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td align="center"><img src="../images/CU/b2.jpg" width="1598" height="419" /></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td align="center"><img src="../images/index/06.jpg" alt="" width="1431" height="220" /></td>
+  </tr>
+</table>
+</body>
+</html>

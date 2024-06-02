@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Time & Ink</title>
+<style type="text/css">
+#apDiv1 {
+	position: absolute;
+	left: 407px;
+	top: 85px;
+	width: 151px;
+	height: 168px;
+	z-index: 1;
+	visibility: hidden;
+}
+.nav {
+	color: #FFF;
+	text-transform: none;
+	text-decoration: none;
+}
+body {
+	background-color: #000;
+}
+#apDiv2 {
+	position: absolute;
+	left: 436px;
+	top: 86px;
+	width: 201px;
+	height: 149px;
+	z-index: 2;
+	visibility: visible;
+}
+body,td,th {
+	color: #FFF;
+}
+#apDiv3 {
+	position: absolute;
+	left: 729px;
+	top: 89px;
+	width: 218px;
+	height: 191px;
+	z-index: 3;
+	visibility: visible;
+}
+a:hover {
+	background-color: #C60;
+	text-transform: none;
+	font-size: 24px;
+}
+	.cs:hover{
+		transform: scale(1.1)
+	}
+	.cs{
+		transition: transform 0.3s ease-out;
+	}
+	.imgIndex:hover img{
+		transform: scale(1.2);
+}
+.imgIndex{
+	overflow: hidden;
+
+}
+.imgIndex img{
+	transition: transform 0.3s ease-out;
+	
+}
+.ulBottom{
+	display: flex;
+	justify-content:space-around;
+	padding:40px 0px;
+	background: rgba(24,24,24,1.00);
+}
+.ulBottom li{
+	  display: inline-block;
+	
+}
+.ulBottom li img{
+	width: 820px;
+}
+.guideGrid{
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	justify-content:center;
+	
+}
+.guideGrid>div{
+	overflow:hidden;
+}
+.guideGrid>div:hover img{
+	transform: scale(1.2);
+}
+.guideGrid img{
+	width: 100%;
+    transition: transform 0.3s ease;
+}
+/*学术页面*/
+.ulTop{
+	list-style: none;
+	color: aliceblue;
+	margin-top: 60px;
+	text-align: center;
+}
+.ulTop li{
+	margin-left: 60px;
+	  display: inline-block;
+		
+}
+.ulTop li:hover a{
+	color: rgba(243,124,33,1.00)
+}
+/*文创页面*/
+.changeColor:hover a{
+	color: aliceblue;
+}
+.changeNum>div:hover a
+{
+	color: rgba(243,124,33,1.00);
+}
+   
+	
+#apDiv4 {
+	position: absolute;
+	left: 548px;
+	top: 86px;
+	width: 167px;
+	height: 149px;
+	z-index: 2;
+	visibility: hidden;
+}
+.jump_img
+{position:absolute;
+    z-index:99999;
+    width:100%;
+    height:80%;
+    top:10%;
+    left:0%;
+    margin:0% 0 0 0%;
+}
+
+</style>
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//倒计时消失      使用 毫秒值
+		$(".jump_img").delay(3000).fadeOut();
+	})
+</script>
+</head>
+
+<body>
+<img src="../images/index/01.png" class="jump_img" onclick="this.style='display:none'" />
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td width="18%" align="center" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><img src="../images/index/02.jpg" width="300" height="74" /></td>
+    <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><a href="index.html" class="nav">Home page</a></td>
+ <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv4','','hide','apDiv1','','show')" onmouseout="MM_showHideLayers('apDiv1','','show')">
+     <a href="CI.html" class="nav" onmouseover="MM_showHideLayers('apDiv4','','hide','apDiv1','','show')" onmouseout="MM_showHideLayers('apDiv1','','hide')">Character introduction</a></td>
+<td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','show')"
+    onmouseout="MM_showHideLayers('apDiv4','','hide','apDiv4','','show')"><a href="CT.html" class="nav">Character trajectory</a></td>
+    <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><a href="AOW.html" class="nav">Appreciation of works</a></td>
+    <td width="16%" align="center" class="nav" onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv4','','hide')"><a href="CU.html" class="nav">Contact us</a></td>
+ </tr>
+  <tr>
+    <td height="24" colspan="8">&nbsp;</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td width="47%" align="center"><img src="../images/index/03.jpg" width="512" height="479" class="cs" /></td>
+    <td width="53%" align="center"><img src="../images/index/11.jpg" alt="" width="828" height="633" /></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td align="center">
+	  
+	  <div style="background: rgba(24,24,24,1.00);">
+	<p style="text-align: center;color: rgba(254,182,34,1.00);font-size: 24px;font-family: 宋体;padding-top: 60px">Character Word Cloud Map</p>
+	<ul class="ulBottom">
+	<li class="imgIndex" style="margin-top: 0px;"><img src="../images/index/04.jpg"></li>
+
+	</ul>
+	
+	
+	</div>
+	  </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td align="center"><img src="../images/index/05.jpg" width="1431" height="179" /></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td align="center"><img src="../images/index/06.jpg" width="1431" height="220" /></td>
+  </tr>
+</table>
+</body>
+</html>
